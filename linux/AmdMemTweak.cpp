@@ -70,6 +70,7 @@ bool IsRelevantDeviceID(struct pci_dev* dev)
 		(dev->device_id == 0x687f) || // Vega 10 XL/XT [Radeon RX Vega 56/64]
 		(dev->device_id == 0x6867) || // Vega 10 XL [Radeon Pro Vega 56]
 		(dev->device_id == 0x6863) || // Vega 10 XTX [Radeon Vega Frontier Edition]
+		(dev->device_id == 0x6861) || // Vega 10 [Radeon Pro WX 9100]
 		(dev->device_id == 0x67df) || // Ellesmere [Radeon RX 470/480/570/570X/580/580X/590]
 		(dev->device_id == 0x67c4) || // Ellesmere [Radeon Pro WX 7100]
 		(dev->device_id == 0x67c7) || // Ellesmere [Radeon Pro WX 5100]
@@ -112,6 +113,7 @@ static MemoryType DetermineMemoryType(struct pci_dev* dev)
 		/* Vega */
 		{ 0x1002, 0x687f, HBM2 }, // "Radeon RX Vega 56/64", CHIP_VEGA10
 		{ 0x1002, 0x6863, HBM2 }, // "Radeon Vega Frontier Edition", CHIP_VEGA10
+		{ 0x1002, 0x6861, HBM2 }, // "Radeon Pro WX 9100", CHIP_VEGA10
 		/* Fury/Nano */
 		{ 0x1002, 0x7300, HBM }, // "Radeon R9 Fury/Nano/X", CHIP_FIJI
 	};
@@ -792,7 +794,7 @@ static int pci_find_instance(char* pci_string)
 			memmove(device, device + 4, strlen(device) - 3);
 		}
 
-		if (!strcmp(pci_string, device))
+		if (strstr(device, pci_string))
 		{
 			closedir(dir);
 			return atoi(entry->d_name);

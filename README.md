@@ -3,8 +3,6 @@
 #### Read and modify memory timings "on the fly"
 ---
 
-![alt text](http://eliovp.com/latestGUIR7incl.png)
-
 ## AMD Memory Tweak XL Released!
 [Link](https://github.com/Eliovp/AMDMemoryTweakXL)
 

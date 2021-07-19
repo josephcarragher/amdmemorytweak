@@ -5,7 +5,7 @@
 
 ![alt text](http://eliovp.com/latestGUIR7incl.png)
 
-# AMD Memory Tweak XL Released!
+## AMD Memory Tweak XL Released!
 [Link](https://github.com/Eliovp/AMDMemoryTweakXL)
 
 ### Support
@@ -19,7 +19,7 @@
 
   - One or more AMD Radeon GPU's
   - amdgpu-pro | ROCM (Verified working on amdgpu-pro 18.30)
-  - Adrenaline (Verified working on v19.4.1/v19.5.*)
+  - Adrenaline (Verified working on v19.4.1/v19.5.x) (Windows Only)
 
 # Build (Linux)
 Prerequisites:

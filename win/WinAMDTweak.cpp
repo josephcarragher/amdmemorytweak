@@ -620,6 +620,7 @@ static const char* LookupDeviceName(u16 device_id)
 	{ 0x1002, 0x687f, "Vega 10 XL/XT [Radeon RX Vega 56/64]" },
 	{ 0x1002, 0x6867, "Vega 10 XL [Radeon Pro Vega 56]" },
 	{ 0x1002, 0x6863, "Vega 10 XTX [Radeon Vega Frontier Edition]" },
+	{ 0x1002, 0x6861, "Vega 10 [Radeon Pro WX 9100]" },
 	{ 0x1002, 0x67df, "Ellesmere [Radeon RX 470/480/570/570X/580/580X/590]" },
 	{ 0x1002, 0x67c4, "Ellesmere [Radeon Pro WX 7100]" },
 	{ 0x1002, 0x67c7, "Ellesmere [Radeon Pro WX 5100]" },
@@ -648,6 +649,7 @@ static bool IsRelevantDeviceID(u16 device_id)
 		(device_id == 0x687f) || // Vega 10 XL/XT [Radeon RX Vega 56/64]
 		(device_id == 0x6867) || // Vega 10 XL [Radeon Pro Vega 56]
 		(device_id == 0x6863) || // Vega 10 XTX [Radeon Vega Frontier Edition]
+		(device_id == 0x6861) || // Vega 10 [Radeon Pro WX 9100]
 		(device_id == 0x67df) || // Ellesmere [Radeon RX 470/480/570/570X/580/580X/590]
 		(device_id == 0x67c4) || // Ellesmere [Radeon Pro WX 7100]
 		(device_id == 0x67c7) || // Ellesmere [Radeon Pro WX 5100]
